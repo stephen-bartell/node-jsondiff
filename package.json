@@ -1,13 +1,13 @@
 {
   "name": "node-jsdiff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WIP!!! jsdiff is just another link in the terminal chain. Use it as such.",
   "main": "lib/jsdiff.js",
   "bin": {
     "jsdiff": "jsdiff-cli.js"
   },
   "dependencies": {
-    "difflet": "~0.2.1",
+    "difflet": "git://github.com/snbartell/node-jsdiff.git",
     "eyes": "~0.1.7",
     "jsondiffpatch": "~0.0.1",
     "nopt": "~1.0.10"
@@ -17,5 +17,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stephen Bartell",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snbartell/node-jsdiff.git"
+  },
+  "keywords": [
+    "json",
+    "diff"
+  ]
 }
