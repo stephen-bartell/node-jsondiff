@@ -1,13 +1,12 @@
 {
   "name": "node-jsdiff",
-  "version": "0.1.1",
-  "description": "WIP!!! jsdiff is just another link in the terminal chain. Use it as such.",
+  "version": "0.1.3",
+  "description": "jsdiff is just another link in the terminal chain. Use it as such.",
   "main": "lib/jsdiff.js",
   "bin": {
     "jsdiff": "./bin/jsdiff-cli.js"
   },
   "dependencies": {
-    "difflet": "git://github.com/snbartell/difflet.git",
     "eyes": "~0.1.7",
     "jsondiffpatch": "~0.0.1",
     "nopt": "~1.0.10"
