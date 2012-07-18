@@ -1,6 +1,6 @@
 {
   "name": "node-jsdiff",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "jsdiff is just another link in the terminal chain. Use it as such.",
   "main": "lib/jsdiff.js",
   "bin": {
@@ -9,7 +9,8 @@
   "dependencies": {
     "eyes": "~0.1.7",
     "jsondiffpatch": "~0.0.1",
-    "nopt": "~1.0.10"
+    "nopt": "~1.0.10",
+    "bufferstream": "~0.5.1"
   },
   "devDependencies": {},
   "scripts": {

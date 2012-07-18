@@ -16,26 +16,33 @@ var main = require('../lib/jsdiff.js')
             , ''
             , ''+pkg.description
             , ''
-            , 'usage: jsdiff [options] left right'
+            , 'usage: jsdiff [options] prev next'
             , ''
             , 'options:'
             , '   d,  --diff-only       print json diff only.'
             , '   f,  --file-input      read json from files.'
-            // , '   o,  --output=FILE     output to FILE or "-" for stdin'
-            // , '   a,  --append=FILE     append to FILE'
+            , ''
+            , 'environment variables:'
+            , ''
+            , '   cdbdelim,             json document delimiter'
+            , ''
+            , 'Note:'
+            , 'jsdiff is pretty dumb when parsing json from stdin.'
+            , 'set the cdbdelim env var as the delimiter.'
             ].join('\n')
 
 var args = parsed.argv
-if (!parsed.output && !parsed.append && args.remain.length === 0) 
-  return console.log(help)
 
 if (args.remain.length > 0 && !parsed['file-input']) {
   console.log('If you\'re trying to read from files, use "-f"')
   return console.log(help)
 }
 
+parsed.separator = process.env.cdbdelim
+if (!parsed.separator) parsed.separator = '\r\n\n\n'
+
 if (parsed['file-input']) {
-  parsed.left = args.remain.shift()
-  parsed.right = args.remain.shift()
+  parsed.prev = args.remain.shift()
+  parsed.next = args.remain.shift()
 }
 main(parsed)
