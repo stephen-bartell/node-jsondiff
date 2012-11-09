@@ -1,10 +1,10 @@
 {
-  "name": "node-jsdiff",
+  "name": "node-jsondiff",
   "version": "0.1.4",
-  "description": "jsdiff is just another link in the terminal chain. Use it as such.",
-  "main": "lib/jsdiff.js",
+  "description": "jsondiff is just another link in the terminal chain. Use it as such.",
+  "main": "lib/jsondiff.js",
   "bin": {
-    "jsdiff": "./bin/jsdiff-cli.js"
+    "jiff": "./bin/jsdiff-cli.js"
   },
   "dependencies": {
     "eyes": "~0.1.7",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/snbartell/node-jsdiff.git"
+    "url": "git://github.com/snbartell/node-jsondiff.git"
   },
   "keywords": [
     "json",
