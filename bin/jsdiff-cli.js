@@ -24,11 +24,11 @@ var main = require('../lib/jsdiff.js')
             , ''
             , 'environment variables:'
             , ''
-            , '   cdbdelim,             json document delimiter'
+            , '   delim                 json document delimiter'
             , ''
             , 'Note:'
             , 'jsdiff is pretty dumb when parsing json from stdin.'
-            , 'set the cdbdelim env var as the delimiter.'
+            , 'set the delim env var as the delimiter.'
             ].join('\n')
 
 var args = parsed.argv
@@ -38,7 +38,7 @@ if (args.remain.length > 0 && !parsed['file-input']) {
   return console.log(help)
 }
 
-parsed.separator = process.env.cdbdelim
+parsed.separator = process.env.delim
 if (!parsed.separator) parsed.separator = '\r\n\n\n'
 
 if (parsed['file-input']) {
